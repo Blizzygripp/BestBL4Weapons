@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best BL4 Weapons & Items</title>
     <style>
-        /* CSS Variables - Kept exactly as your original theme */
         :root {
             --background-color: #1a1a2e; 
             --text-color: #e0e0e0;      
@@ -65,65 +64,67 @@
 
         .weapon-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
             gap: var(--spacing-unit);
             justify-content: center;
         }
 
         .weapon-card {
-            background-color: var(--card-background);
+            background-color: #24243e; 
             border-radius: var(--border-radius);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             overflow: hidden;
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            transition: transform 0.2s ease-in-out;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding-bottom: 15px;
+            padding-bottom: 20px;
         }
 
         .weapon-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
 
-        .weapon-card img {
+        /* Image Placeholder Slot */
+        .image-slot {
             width: 100%;
-            height: 200px;
-            object-fit: contain;
+            height: 180px;
             background-color: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 10px;
-            box-sizing: border-box;
+        }
+
+        .image-slot img {
+            max-width: 90%;
+            max-height: 80%;
+            object-fit: contain;
         }
 
         .weapon-card h3 {
             color: var(--text-color);
-            font-size: 1.4em;
-            margin: 15px 10px 10px;
+            font-size: 1.3em;
+            margin: 20px 10px 15px;
         }
 
-        .weapon-card .details-button {
+        .details-button {
             display: inline-block;
             background-color: var(--link-color);
             color: var(--background-color);
-            padding: 10px 20px;
+            padding: 12px 24px;
             border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
-            transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
-            margin-top: auto;
+            margin: 0 auto;
+            width: fit-content;
+            transition: background-color 0.2s;
         }
 
-        .weapon-card .details-button:hover {
+        .details-button:hover {
             background-color: var(--link-hover-color);
-            transform: translateY(-2px);
         }
 
-        /* Responsive design kept intact */
-        @media (max-width: 768px) {
-            header h1 { font-size: 2.2em; }
+        @media (max-width: 600px) {
             .weapon-grid { grid-template-columns: 1fr; }
         }
     </style>
@@ -134,86 +135,95 @@
             <h1>Best BL4 Weapons & Items</h1>
         </header>
 
-        <main>
-            <section class="weapon-category">
-                <h2>ASSAULT RIFLE</h2>
-                <div class="weapon-grid">
-                    <div class="weapon-card">
-                        <img src="images/Wombo Combo.png" alt="Wombo Combo">
-                        <h3>Wombo Combo</h3>
-                        <a href="https://www.ign.com/wikis/borderlands-4/Best_Legendary_Weapons_and_Items" target="_blank" class="details-button">View Details</a>
-                    </div>
-                    <div class="weapon-card">
-                        <img src="images/Oscar Mike.png" alt="Oscar Mike">
-                        <h3>Oscar Mike</h3>
-                        <a href="#" class="details-button">View Details</a>
-                    </div>
-                    <div class="weapon-card">
-                        <img src="images/Bugbear.png" alt="Bugbear">
-                        <h3>Bugbear</h3>
-                        <a href="#" class="details-button">View Details</a>
-                    </div>
-                </div>
-            </section>
+        <section class="weapon-category">
+            <h2>ASSAULT RIFLE</h2>
+            <div class="weapon-grid">
+                <div class="weapon-card"><div class="image-slot"><img src="wombo_combo.png" alt="Wombo Combo"></div><h3>Wombo Combo</h3><a href="https://www.lootlemon.com/weapon/wombo-combo-bl4" target="_blank" class="details-button">View Details</a></div>
+                <div class="weapon-card"><div class="image-slot"><img src="oscar_mike.png" alt="Oscar Mike"></div><h3>Oscar Mike</h3><a href="https://www.lootlemon.com/weapon/oscar-mike-bl4" target="_blank" class="details-button">View Details</a></div>
+                <div class="weapon-card"><div class="image-slot"><img src="gmr.png" alt="G.M.R."></div><h3>G.M.R.</h3><a href="https://www.lootlemon.com/weapon/gmr-bl4" target="_blank" class="details-button">View Details</a></div>
+                <div class="weapon-card"><div class="image-slot"><img src="goalkeeper.png" alt="Goalkeeper"></div><h3>Goalkeeper</h3><a href="https://www.lootlemon.com/weapon/goalkeeper-bl4" target="_blank" class="details-button">View Details</a></div>
+                <div class="weapon-card"><div class="image-slot"><img src="aegons_dream.png" alt="Aegon's Dream"></div><h3>Aegon's Dream</h3><a href="https://www.lootlemon.com/weapon/aegons-dream-bl4" target="_blank" class="details-button">View Details</a></div>
+                <div class="weapon-card"><div class="image-slot"><img src="boomslang.png" alt="Boomslang"></div><h3>Boomslang</h3><a href="https://www.lootlemon.com/weapon/boomslang-bl4" target="_blank" class="details-button">View Details</a></div>
+            </div>
+        </section>
 
-            <section class="weapon-category">
-                <h2>SHOTGUN</h2>
-                <div class="weapon-grid">
-                    <div class="weapon-card">
-                        <img src="images/Bod.png" alt="Bod">
-                        <h3>Bod</h3>
-                        <a href="#" class="details-button">View Details</a>
-                    </div>
-                    <div class="weapon-card">
-                        <img src="images/Convergence.png" alt="Convergence">
-                        <h3>Convergence</h3>
-                        <a href="#" class="details-button">View Details</a>
-                    </div>
-                    <div class="weapon-card">
-                        <img src="images/Hot Slugger.png" alt="Hot Slugger">
-                        <h3>Hot Slugger</h3>
-                        <a href="#" class="details-button">View Details</a>
-                    </div>
-                </div>
-            </section>
+        <section class="weapon-category">
+            <h2>SMG</h2>
+            <div class="weapon-grid">
+                <div class="weapon-card"><div class="image-slot"><img src="kaoson.png" alt="Kaoson"></div><h3>Kaoson</h3><a href="https://www.lootlemon.com/weapon/kaoson-bl4" target="_blank" class="details-button">View Details</a></div>
+                <div class="weapon-card"><div class="image-slot"><img src="plasma_coil.png" alt="Plasma Coil"></div><h3>Plasma Coil</h3><a href="https://www.lootlemon.com/weapon/plasma-coil-bl3" target="_blank" class="details-button">View Details</a></div>
+                <div class="weapon-card"><div class="image-slot"><img src="burts_bees.png" alt="Burt's Bees"></div><h3>Burt's Bees</h3><a href="https://www.lootlemon.com/weapon/burts-bees-bl4" target="_blank" class="details-button">View Details</a></div>
+                <div class="weapon-card"><div class="image-slot"><img src="boory.png" alt="Purple Boory"></div><h3>Purple Boory</h3><a href="https://www.lootlemon.com/weapon/boory-bl4" target="_blank" class="details-button">View Details</a></div>
+                <div class="weapon-card"><div class="image-slot"><img src="finity_xxl.png" alt="Finity XXL"></div><h3>Finity XXL</h3><a href="https://www.lootlemon.com/weapon/finity-xxl-bl4" target="_blank" class="details-button">View Details</a></div>
+            </div>
+        </section>
 
-            <section class="weapon-category">
-                <h2>ARMOR SHIELD</h2>
-                <div class="weapon-grid">
-                    <div class="weapon-card">
-                        <img src="images/Firewerks.png" alt="Firewerks">
-                        <h3>Firewerks</h3>
-                        <a href="#" class="details-button">View Details</a>
-                    </div>
-                    <div class="weapon-card">
-                        <img src="images/Super Soldier.png" alt="Super Soldier">
-                        <h3>Super Soldier</h3>
-                        <a href="#" class="details-button">View Details</a>
-                    </div>
-                    <div class="weapon-card">
-                        <img src="images/Onion.png" alt="Onion">
-                        <h3>Onion</h3>
-                        <a href="#" class="details-button">View Details</a>
-                    </div>
-                </div>
-            </section>
+        <section class="weapon-category">
+            <h2>SHOTGUN</h2>
+            <div class="weapon-grid">
+                <div class="weapon-card"><div class="image-slot"><img src="bod.png" alt="Bod"></div><h3>Bod</h3><a href="https://www.lootlemon.com/weapon/bod-bl4" target="_blank" class="details-button">View Details</a></div>
+                <div class="weapon-card"><div class="image-slot"><img src="convergence.png" alt="Convergence"></div><h3>Convergence</h3><a href="https://www.lootlemon.com/weapon/convergence-bl3" target="_blank" class="details-button">View Details</a></div>
+                <div class="weapon-card"><div class="image-slot"><img src="hot_slugger.png" alt="Hot Slugger"></div><h3>Hot Slugger</h3><a href="https://www.lootlemon.com/weapon/hot-slugger-bl4" target="_blank" class="details-button">View Details</a></div>
+                <div class="weapon-card"><div class="image-slot"><img src="lucians_flank.png" alt="Lucian's Flank"></div><h3>Lucian's Flank</h3><a href="https://www.lootlemon.com/weapon/lucians-flank-bl4" target="_blank" class="details-button">View Details</a></div>
+                <div class="weapon-card"><div class="image-slot"><img src="rainbow_vomit.png" alt="Rainbow Vomit"></div><h3>Rainbow Vomit</h3><a href="https://www.lootlemon.com/weapon/rainbow-vomit-bl4" target="_blank" class="details-button">View Details</a></div>
+                <div class="weapon-card"><div class="image-slot"><img src="tks_wave.png" alt="TK's Wave"></div><h3>TK's Wave</h3><a href="https://www.lootlemon.com/weapon/tks-wave-bl3" target="_blank" class="details-button">View Details</a></div>
+                <div class="weapon-card"><div class="image-slot"><img src="kickballer.png" alt="Kickballer"></div><h3>Kickballer</h3><a href="https://www.lootlemon.com/weapon/kickballer-bl4" target="_blank" class="details-button">View Details</a></div>
+            </div>
+        </section>
 
-            <section class="weapon-category">
-                <h2>REPKIT</h2>
-                <div class="weapon-grid">
-                    <div class="weapon-card">
-                        <img src="images/War Paint.png" alt="War Paint">
-                        <h3>War Paint</h3>
-                        <a href="#" class="details-button">View Details</a>
-                    </div>
-                    <div class="weapon-card">
-                        <img src="images/Triple Bypass.png" alt="Triple Bypass">
-                        <h3>Triple Bypass</h3>
-                        <a href="#" class="details-button">View Details</a>
-                    </div>
-                </div>
-            </section>
-        </main>
+        <section class="weapon-category">
+            <h2>PISTOL</h2>
+            <div class="weapon-grid">
+                <div class="weapon-card"><div class="image-slot"><img src="seventh_sense.png" alt="Seventh Sense"></div><h3>Seventh's Sense</h3><a href="https://www.lootlemon.com/weapon/seventh-sense-bl3" target="_blank" class="details-button">View Details</a></div>
+                <div class="weapon-card"><div class="image-slot"><img src="queens_rest.png" alt="Queen's Rest"></div><h3>Queen's Rest</h3><a href="https://www.lootlemon.com/weapon/queens-rest-bl4" target="_blank" class="details-button">View Details</a></div>
+                <div class="weapon-card"><div class="image-slot"><img src="slippy.png" alt="Slippy"></div><h3>Slippy</h3><a href="https://www.lootlemon.com/weapon/slippy-bl4" target="_blank" class="details-button">View Details</a></div>
+                <div class="weapon-card"><div class="image-slot"><img src="killspring.png" alt="Killspring"></div><h3>Killspring</h3><a href="https://www.lootlemon.com/weapon/killspring-bl4" target="_blank" class="details-button">View Details</a></div>
+                <div class="weapon-card"><div class="image-slot"><img src="katagawas_revenge.png" alt="Katagawa's Revenge"></div><h3>Katagawa's Revenge</h3><a href="https://www.lootlemon.com/weapon/katagawas-revenge-bl4" target="_blank" class="details-button">View Details</a></div>
+            </div>
+        </section>
+
+        <section class="weapon-category">
+            <h2>SNIPER</h2>
+            <div class="weapon-grid">
+                <div class="weapon-card"><div class="image-slot"><img src="complex_root.png" alt="Complex Root"></div><h3>Complex Root</h3><a href="https://www.lootlemon.com/weapon/complex-root-bl3" target="_blank" class="details-button">View Details</a></div>
+                <div class="weapon-card"><div class="image-slot"><img src="stray.png" alt="Stray"></div><h3>Stray</h3><a href="https://www.lootlemon.com/weapon/stray-bl4" target="_blank" class="details-button">View Details</a></div>
+                <div class="weapon-card"><div class="image-slot"><img src="borstel_ballista.png" alt="Borstel Ballista"></div><h3>Borstel Ballista</h3><a href="https://www.lootlemon.com/weapon/borstel-ballista-bl4" target="_blank" class="details-button">View Details</a></div>
+            </div>
+        </section>
+
+        <section class="weapon-category">
+            <h2>ARMOR & SHIELDS</h2>
+            <div class="weapon-grid">
+                <div class="weapon-card"><div class="image-slot"><img src="super_soldier.png" alt="Super Soldier"></div><h3>Super Soldier</h3><a href="https://www.lootlemon.com/shield/super-soldier-bl3" target="_blank" class="details-button">View Details</a></div>
+                <div class="weapon-card"><div class="image-slot"><img src="firewerks.png" alt="Firewerks"></div><h3>Firewerks</h3><a href="https://www.lootlemon.com/shield/firewerks-bl4" target="_blank" class="details-button">View Details</a></div>
+                <div class="weapon-card"><div class="image-slot"><img src="whiskey_tango.png" alt="Whiskey Tango Foxtrot"></div><h3>Whiskey Tango Foxtrot</h3><a href="https://www.lootlemon.com/shield/whiskey-tango-foxtrot-bl3" target="_blank" class="details-button">View Details</a></div>
+                <div class="weapon-card"><div class="image-slot"><img src="golden_god.png" alt="Golden God"></div><h3>Golden God</h3><a href="https://www.lootlemon.com/shield/golden-god-bl4" target="_blank" class="details-button">View Details</a></div>
+                <div class="weapon-card"><div class="image-slot"><img src="midnight_defiance.png" alt="Midnight Defiance"></div><h3>Midnight Defiance</h3><a href="https://www.lootlemon.com/shield/midnight-defiance-bl4" target="_blank" class="details-button">View Details</a></div>
+                <div class="weapon-card"><div class="image-slot"><img src="heavyweight.png" alt="Heavyweight"></div><h3>Heavyweight</h3><a href="https://www.lootlemon.com/shield/heavyweight-bl4" target="_blank" class="details-button">View Details</a></div>
+            </div>
+        </section>
+
+        <section class="weapon-category">
+            <h2>CLASS MODS & ARTIFACTS</h2>
+            <div class="weapon-grid">
+                <div class="weapon-card"><div class="image-slot"><img src="dancer.png" alt="Dancer (Rafa)"></div><h3>Dancer (Rafa)</h3><a href="https://www.lootlemon.com/class-mod/dancer-bl4" target="_blank" class="details-button">View Details</a></div>
+                <div class="weapon-card"><div class="image-slot"><img src="forgemaster.png" alt="Forgemaster (Amon)"></div><h3>Forgemaster (Amon)</h3><a href="https://www.lootlemon.com/class-mod/forgemaster-bl4" target="_blank" class="details-button">View Details</a></div>
+                <div class="weapon-card"><div class="image-slot"><img src="teen_witch.png" alt="Teen Witch (Vex)"></div><h3>Teen Witch (Vex)</h3><a href="https://www.lootlemon.com/class-mod/teen-witch-bl4" target="_blank" class="details-button">View Details</a></div>
+                <div class="weapon-card"><div class="image-slot"><img src="bio_robot.png" alt="Bio Robot (Harlowe)"></div><h3>Bio Robot (Harlowe)</h3><a href="https://www.lootlemon.com/class-mod/bio-robot-bl4" target="_blank" class="details-button">View Details</a></div>
+                <div class="weapon-card"><div class="image-slot"><img src="crit_knife.png" alt="Crit Knife"></div><h3>Crit Knife (Vivisecting)</h3><a href="https://www.lootlemon.com/bonus-item/crit-knife-bl4" target="_blank" class="details-button">View Details</a></div>
+                <div class="weapon-card"><div class="image-slot"><img src="phantom_flame.png" alt="Phantom Flame"></div><h3>Phantom Flame</h3><a href="https://www.lootlemon.com/class-mod/phantom-flame-bl4" target="_blank" class="details-button">View Details</a></div>
+            </div>
+        </section>
+
+        <section class="weapon-category">
+            <h2>UTILITY & GRENADES</h2>
+            <div class="weapon-grid">
+                <div class="weapon-card"><div class="image-slot"><img src="bottled_lightning.png" alt="Bottled Lightning"></div><h3>Bottled Lightning</h3><a href="https://www.lootlemon.com/grenade-mod/bottled-lightning-bl4" target="_blank" class="details-button">View Details</a></div>
+                <div class="weapon-card"><div class="image-slot"><img src="firepot.png" alt="Firepot"></div><h3>Firepot</h3><a href="https://www.lootlemon.com/grenade-mod/firepot-bl4" target="_blank" class="details-button">View Details</a></div>
+                <div class="weapon-card"><div class="image-slot"><img src="watts.png" alt="Watts 4 Dinner"></div><h3>Watts 4 Dinner</h3><a href="https://www.lootlemon.com/weapon/watts-4-dinner-bl4" target="_blank" class="details-button">View Details</a></div>
+                <div class="weapon-card"><div class="image-slot"><img src="disc_jockey.png" alt="Disc Jockey"></div><h3>Disc Jockey</h3><a href="https://www.lootlemon.com/grenade-mod/disc-jockey-bl4" target="_blank" class="details-button">View Details</a></div>
+            </div>
+        </section>
     </div>
 </body>
 </html>
